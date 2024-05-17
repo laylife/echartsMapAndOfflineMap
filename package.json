@@ -1,0 +1,37 @@
+{
+  "name": "data_big_screen",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve:dev": "vue-cli-service serve --mode dev",
+    "serve:test": "vue-cli-service serve --mode test",
+    "build:dev": "vue-cli-service build --mode dev",
+    "build:test": "vue-cli-service build --mode test",
+    "build:production": "vue-cli-service build --mode production"
+  },
+  "dependencies": {
+    "@visactor/vchart": "^1.10.5",
+    "china-map-geojson": "^1.0.4",
+    "compression-webpack-plugin": "^11.1.0",
+    "core-js": "^3.8.3",
+    "echarts": "^5.5.0",
+    "echarts-gl": "^2.0.9",
+    "echarts-liquidfill": "^3.1.0",
+    "element-ui": "^2.15.14",
+    "highcharts": "^11.4.1",
+    "moment": "^2.30.1",
+    "vue": "^2.6.14",
+    "vue-count-to": "^1.0.13",
+    "vue-router": "^3.5.1",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "sass": "^1.75.0",
+    "sass-loader": "^12.6.0",
+    "vue-template-compiler": "^2.6.14"
+  }
+}
