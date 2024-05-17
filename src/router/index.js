@@ -9,11 +9,16 @@ const routes = [
     name: 'home',
     component: ()=>import('@/views/home')
   },
+  {
+    path: '/bdMap',
+    name: 'bd_map',
+    component: ()=>import('@/views/baidu/index')
+  }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+  mode: 'hash',
+  // base: process.env.BASE_URL,
   routes
 })
 

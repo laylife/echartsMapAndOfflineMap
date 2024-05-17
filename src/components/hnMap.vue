@@ -330,7 +330,7 @@ export default {
     },
     // 进入百度地图
     toBaiDuMap() {
-      alert("baidu!");
+      this.$router.push({path:'/bdMap'})
       this.closeAlert();
     },
   },
