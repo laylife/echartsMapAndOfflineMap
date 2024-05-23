@@ -10,11 +10,14 @@ export default {
     data(){
        return{
         height: '',
-        lnglat: []
+        lnglat: [],
+        isReload: false
        }
     },
+    
   mounted() {
     console.log(this.$route.query)
+    
     if(this.$route.query.lng){
       this.lnglat = [this.$route.query.lng,this.$route.query.lat]
     }else{
@@ -25,6 +28,7 @@ export default {
     let height = window.innerHeight
     this.height = height;
   },
+ 
   methods: {
     initMap(center) {
       var BMap = window.BMap || {};
