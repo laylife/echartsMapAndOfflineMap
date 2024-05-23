@@ -48,18 +48,22 @@ export default {
         {
           name: "长沙市",
           value: this.randomData(),
+          lnglag: [112.937421,28.24431]
         },
         {
           name: "株洲市",
           value: this.randomData(),
+          lnglag: [113.139791,27.8403]
         },
         {
           name: "湘潭市",
           value: this.randomData(),
+          lnglag: [112.951219,27.844389]
         },
         {
           name: "衡阳市",
           value: this.randomData(),
+          lnglag: [112.574075,26.908197]
         },
         {
           name: "常德市",
@@ -67,18 +71,22 @@ export default {
           label: {
             offset: [20, 0],
           },
+          lnglag: [111.700203,29.039609]
         },
         {
           name: "张家界市",
           value: this.randomData(),
+          lnglag: [110.485981,29.136572]
         },
         {
           name: "益阳市",
           value: this.randomData(),
+          lnglag: [112.362506,28.569657]
         },
         {
           name: "郴州市",
           value: this.randomData(),
+          lnglag: [113.024808,25.78933]
         },
         {
           name: "永州市",
@@ -86,26 +94,32 @@ export default {
           label: {
             offset: [10, 0],
           },
+          lnglag: [111.617415,26.437122]
         },
         {
           name: "怀化市",
           value: this.randomData(),
+          lnglag: [109.998453,27.590604]
         },
         {
           name: "娄底市",
           value: this.randomData(),
+          lnglag: [111.99456,27.705291]
         },
         {
           name: "岳阳市",
           value: this.randomData(),
+          lnglag: [113.135192,29.378577]
         },
         {
           name: "邵阳市",
           value: this.randomData(),
+          lnglag:[111.470237,27.25404]
         },
         {
           name: "湘西土家族苗族自治州",
           value: this.randomData(),
+          lnglag: [109.739831,28.268767]
         },
       ];
       let that = this;
@@ -330,7 +344,9 @@ export default {
     },
     // 进入百度地图
     toBaiDuMap() {
-      this.$router.push({path:'/bdMap'})
+      console.log(this.templeToolTip)
+      let lnglat = this.templeToolTip.data.lnglag;
+      this.$router.push({path:'/bdMap',query:{ lng: lnglat[0],lat: lnglat[1] }})
       this.closeAlert();
     },
   },
