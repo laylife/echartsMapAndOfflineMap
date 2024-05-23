@@ -24,9 +24,14 @@ export default {
       // 默认长沙
       this.lnglat = [112.937421,28.24431]
     }
-    this.initMap(this.lnglat);
+    
+    
     let height = window.innerHeight
     this.height = height;
+    let that = this;
+    setTimeout(function(){
+      that.initMap(that.lnglat);
+    },300);
   },
  
   methods: {
